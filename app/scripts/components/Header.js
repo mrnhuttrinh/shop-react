@@ -6,6 +6,11 @@ export default class Header extends Component{
                 <div id="logo-group">
                     <span id="logo"> <img src="img/logo.png" alt="SmartAdmin" /> </span>
                 </div>
+                <div className="pull-right">
+                    <div id="hide-menu" className="btn-header pull-right">
+                        <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i className="fa fa-reorder"></i></a> </span>
+                    </div>
+                </div>
             </header>
         );
     }
