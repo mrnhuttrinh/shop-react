@@ -11,7 +11,6 @@ export default class App extends React.Component{
                 <Header />
                 <LeftMenu pathName={this.props.location.pathname}/>
                 {this.props.children}
-                <Footer />
             </div>
         )
     }
