@@ -5,7 +5,7 @@ export default class LeftMenu extends Component{
     render() {
         var pathName = this.props.pathName;
         return (
-            <aside id="left-panel">
+            <aside id="left-panel" style={{"position": "fixed"}}>
                 <div className="login-info">
                     <span>
                         <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
