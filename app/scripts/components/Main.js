@@ -1,6 +1,13 @@
 import React, {Component} from 'react'
-export default class Main extends Component{
+import { connect, bindActionCreators } from 'react-redux'
+import {increase, decrease} from '../actions/count'
+
+class Main extends Component{
+    constructor(props) {
+        super(props)
+    }
     render() {
+        var number = this.props.number;
         return (
             <div id="main" role="main">
                 <div id="ribbon">
@@ -14,9 +21,28 @@ export default class Main extends Component{
                     </ol>
                 </div>
                 <div id="content">
-                    Main
+                    <div>
+                        Some state changes:
+                        {number}
+                        <button onClick={() => this.props.increase(1)}>Increase</button>
+                        <button onClick={() => this.props.decrease(1)}>Decrease</button>
+                    </div>
                 </div>
             </div>
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        number: state.default.number
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    {
+        increase,
+        decrease
+    }
+)(Main)
