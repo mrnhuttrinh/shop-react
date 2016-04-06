@@ -1,2 +1,2 @@
-export const INCREASE = 'INCREASE'
-export const DECREASE = 'DECREASE'
+export const GET_GROUP = 'GET_GROUP'
+export const GET_CATEGORIES = 'GET_CATEGORIES'

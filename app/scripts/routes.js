@@ -5,6 +5,8 @@ import Inbox from './components/Inbox';
 import Message from './components/Message';
 import Products from './components/Products';
 import NotFound from './components/NotFound';
+import Categories from './components/Categories';
+import CategoryDetail from './components/categories/Detail';
 
 export default {
     path: '/',
@@ -13,6 +15,14 @@ export default {
         component: Main 
     },
     childRoutes: [
+        {
+            path: 'categories/:group',
+            component: Categories,
+        },
+        {
+            path: 'categories/detail/:id',
+            component: CategoryDetail
+        },
         {
             path: 'about',
             component: About 

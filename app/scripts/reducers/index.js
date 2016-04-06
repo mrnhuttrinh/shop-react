@@ -1,2 +1,2 @@
-import count from './count'
-export default count;
+import main from './main'
+export default main;
